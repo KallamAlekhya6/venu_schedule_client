@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* FullCalendar custom styles */
+.fc {
+  font-family: inherit !important;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+.fc .fc-button {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.75rem !important;
+  text-transform: capitalize !important;
+  transition: all 0.2s !important;
+}
+
+.fc .fc-button:hover {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+.fc .fc-button-active {
+  background: linear-gradient(to right, #6366f1, #a855f7) !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+.fc .fc-button-active:hover {
+  background: linear-gradient(to right, #4f46e5, #9333ea) !important;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border-color: #e2e8f0 !important;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  padding: 0.5rem !important;
+}
+
+.fc .fc-timegrid-slot-label-cushion {
+  color: #64748b !important;
+  font-size: 0.75rem !important;
+}
+
+.fc .fc-timegrid-axis-cushion {
+  color: #64748b !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #64748b !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+.fc-event {
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 2px 6px !important;
+  cursor: pointer !important;
+}
+
+.fc-event-title {
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: #f0f9ff !important;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+  border-color: #6366f1 !important;
+  border-width: 2px !important;
+}
+
+.fc .fc-timegrid-now-indicator-arrow {
+  border-color: #6366f1 !important;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Focus visible styles */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background: #c7d2fe;
+  color: #1e1b4b;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
